@@ -12,6 +12,10 @@ func main() {
 	for _, chain := range chains {
 		println(chain)
 		list, _ := tables.List(s, chain)
-		println(list)
+		for _, s2 := range list {
+			print(s2)
+			print("  ")
+		}
+		println()
 	}
 }
