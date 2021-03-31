@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	tables := ipt.IPTables{}
+	tables, _ := ipt.New()
 	chains, _ := tables.ListChains(os.Args[1])
 	for _, chain := range chains {
 		println(chain)
